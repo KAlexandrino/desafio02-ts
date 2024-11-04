@@ -5,28 +5,24 @@ import {
   Box,
   Button
 } from '@chakra-ui/react'
-import { Layout } from './components/Layout';
 
 function App() {
   return (
     <ChakraProvider>
-      <Layout>
-        <Box>
-          <h1>Faça o login aqui</h1>
+      <Box minHeight='100vh' backgroundColor={'#9413dc'} padding={'25px'}>
+        <Box backgroundColor={'#FFFFFF'} borderRadius={'25px'} padding={'15px'}>
+          <center>
+            <h1>Faça o login aqui</h1>
+          </center>
+          <Input placeholder="email" />
+          <Input placeholder="password" />
+          <center>
+            <Button colorScheme='teal' size='sm' width='100%' marginTop='5px'>
+              LOGIN
+            </Button>
+          </center>
         </Box>
-        <label htmlFor='emailInput' >
-          E-mail
-        </label>
-        <input id='emailInput' type='email' />
-
-        <label htmlFor='passwordInput' >
-          Senha
-        </label>
-        <input id='passwordInput' type='password' />
-        <button>
-          Entrar
-        </button>
-      </Layout>
+      </Box>
     </ChakraProvider>
   );
 }
