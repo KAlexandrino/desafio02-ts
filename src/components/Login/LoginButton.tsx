@@ -4,6 +4,10 @@ interface ILoginButton {
     onClick: () => void
 }
 
+const login = (): void => {
+    alert('Bem vindos!')
+}
+
 const LoginButton = ({onClick}: ILoginButton) => {
     return (
         <Center>
