@@ -1,9 +1,14 @@
-import './Header.css'
+import { Flex } from "@chakra-ui/react";
+import Logo from "./Logo";
+import MenuOptions from "./MenuOptions";
 
-export const Header  = () => {
-  return(
-    <div className='header'>
-      Dio Bank
-    </div>
+const Header: React.FC = () => {
+  return (
+    <Flex as="header" bg="black" p={4} justify="space-between" align="center">
+      <Logo />
+      <MenuOptions />
+    </Flex>
   )
 }
+
+export default Header;
